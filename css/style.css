@@ -2,6 +2,7 @@
     --font: 'Poppins', sans-serif;
     --bg-grey: #ececec;
     --color-grey-letter: #808080;
+    --letter-blue: #00bfd8;
 }
 
 * {
@@ -31,14 +32,14 @@ body {
 .container-grid span {
     font-size: 14px;
     font-weight: 600;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-top: 5px;
 }
 
 .icons-movile {
     display: flex;
     justify-content: flex-end;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-top: 5px;
 }
 /* HEADER NAV-INFORMATION */
@@ -66,8 +67,8 @@ div .item-balance {
     justify-content: end;
     align-items: center;
     margin-right: 15px;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     letter-spacing: 0.5px;
 }
 .container-balance {
@@ -77,8 +78,10 @@ div .item-balance {
 }
 div .item-balance__value {
     margin: 6px 15px 0 0;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 600;
+    color: black;
+    letter-spacing: .5px;
 }
 .container-nav {
     margin: 0 20px 0 20px;
@@ -90,12 +93,155 @@ div .nav-grid {
     margin-top: 20px;
 }
 .nav-grid li {
-    display: flex;
-    justify-content: center;
+    list-style: none;
 }
-.items-nav a {
+.nav-grid a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.items-nav__first a {
+    color: black;
     text-decoration: none;
-    color: var(--color-grey-letter);
-    font-size: 16px;
     font-weight: 600;
 }
+.items-nav a {
+    color: var(--color-grey-letter);
+    text-decoration: none;
+}
+
+/* Main users favorites*/
+.container-user {
+    margin-left: 30px;
+}
+.list-options {
+    margin-top: 30px;
+}
+.items-options {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+.content-user {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 180px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 24px;
+    /* border: 2px solid red; */
+}
+.photos-users img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.content-user span {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--font);
+}
+
+.container-user a {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    height: 50px;
+    text-decoration: none;
+    color: black;
+}
+.container-user svg {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+/* Form main */
+form {
+   margin: 20px 20px 0 20px;
+}
+.elements-form {
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr); */
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+.values-default {
+    display: flex;
+    justify-content: space-evenly;
+}
+div .btn-form {
+    width: 100%;
+    height: 48px;
+    padding: 10px;
+    border: transparent;
+    border-radius: 18px;
+}
+input::placeholder {
+    color: black;
+}
+div .btn-value__predetermined {
+    width: 80px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 14px;
+    border: transparent;
+    background-color: white;
+}
+
+.btn-value__predetermined a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--font);
+}
+
+.ctr-btn__send {
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+div .btn-form {
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.btn-send {
+    height: 40px;
+    background-color: white;
+    border-radius: 14px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+div .btn-send:nth-child(1) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+div .btn-send:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.btn-send svg {
+    margin-right: 10px;
+}
+
+div .btn-submit {
+    background-color: black;
+    color: white;
+    font-family: var(--font);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
